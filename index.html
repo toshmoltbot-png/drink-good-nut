@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GOOD NUT - An Honest Review</title>
+  <meta name="description" content="A very normal review of a coconut water by a very calm man." />
+  <style>
+    :root {
+      --bg: #0d0a07;
+      --panel: #17110c;
+      --panel-2: #21170f;
+      --text: #fff7e8;
+      --muted: #d8c4a2;
+      --gold: #f7c85b;
+      --coconut: #b98545;
+      --blue: #48c8e8;
+      --green: #74c476;
+      --red: #e85d4f;
+      --shadow: rgba(0,0,0,.35);
+      --max: 1060px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(247,200,91,.14), transparent 34rem),
+        linear-gradient(180deg, #15100b 0%, var(--bg) 45%, #070504 100%);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+
+    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+
+    header {
+      padding: 44px 0 24px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 800;
+      font-size: .82rem;
+    }
+
+    h1 {
+      margin: 12px 0 8px;
+      font-size: clamp(4rem, 13vw, 9.5rem);
+      line-height: .82;
+      letter-spacing: -.06em;
+      text-transform: uppercase;
+      text-shadow: 0 8px 28px var(--shadow);
+    }
+
+    .subtitle {
+      max-width: 880px;
+      margin: 0 auto;
+      font-size: clamp(1.1rem, 2vw, 1.55rem);
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .hero-img,
+    .feature-img {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.12);
+      margin: 28px auto 0;
+      background: #000;
+    }
+
+    section { padding: 70px 0; }
+    .section-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+      border: 1px solid rgba(255,255,255,.11);
+      border-radius: 32px;
+      padding: clamp(24px, 5vw, 56px);
+      box-shadow: 0 22px 60px rgba(0,0,0,.24);
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 5vw, 4.5rem);
+      line-height: .95;
+      margin: 0 0 28px;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: clamp(1.35rem, 3vw, 2.25rem);
+      line-height: 1;
+    }
+
+    p { margin: 0 0 1.05rem; font-size: clamp(1.05rem, 1.5vw, 1.22rem); }
+    .big p { font-size: clamp(1.16rem, 2vw, 1.55rem); line-height: 1.55; }
+    .short-lines p { margin-bottom: .62rem; }
+    .center { text-align: center; }
+    .muted { color: var(--muted); }
+
+    .callout {
+      margin: 30px 0;
+      padding: 24px;
+      border-left: 7px solid var(--gold);
+      background: rgba(247,200,91,.1);
+      border-radius: 0 22px 22px 0;
+      font-weight: 800;
+      color: #fff0c8;
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .review-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .faq-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .flavor,
+    .faq {
+      background: rgba(0,0,0,.22);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .score {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 5px 0 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(247,200,91,.12);
+      color: var(--gold);
+      font-size: 1.05rem;
+      font-weight: 900;
+      border: 1px solid rgba(247,200,91,.25);
+    }
+
+    .text-exchange {
+      max-width: 560px;
+      margin: 28px auto 0;
+      border-radius: 34px;
+    }
+
+    .counter-inline {
+      text-align: center;
+      padding: 36px 20px;
+    }
+    .zero {
+      font-size: clamp(7rem, 24vw, 16rem);
+      line-height: .8;
+      font-weight: 950;
+      color: var(--red);
+      text-shadow: 0 0 28px rgba(232,93,79,.45);
+    }
+    .goal { font-size: clamp(1.4rem, 4vw, 3rem); font-weight: 900; color: var(--gold); }
+
+    .closing {
+      background:
+        linear-gradient(180deg, rgba(116,196,118,.1), rgba(0,0,0,.2)),
+        var(--panel);
+    }
+
+    .disclaimer {
+      margin-top: 32px;
+      padding: 24px;
+      border: 1px dashed rgba(255,255,255,.28);
+      border-radius: 18px;
+      color: var(--muted);
+      background: rgba(0,0,0,.22);
+    }
+
+    footer {
+      padding: 38px 0 54px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    @media (max-width: 760px) {
+      .review-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      section { padding: 46px 0; }
+    }
+
+    @media (max-width: 480px) {
+      .review-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="wrap">
+    <div class="eyebrow">A very normal review by a very calm man</div>
+    <h1>GOOD NUT 🥥</h1>
+    <p class="subtitle">
+      My best friend made coconut water. Great. Fantastic. Love that for him.
+      One question: WHY AM I NOT THE COCONUT MAN?!
+    </p>
+    <figure class="hero-img">
+      <img src="assets/hero-review.png" alt="Dramatic parody poster of a football player inspecting a coconut water can." />
+    </figure>
+  </header>
+
+  <main>
+
+    <!-- COUNTER -->
+    <section style="padding: 40px 0;">
+      <div class="wrap section-card counter-inline">
+        <h2 style="margin-bottom: 12px;">Times I've Been Asked To Be In A Good Nut Ad</h2>
+        <div class="zero">0</div>
+        <p class="muted" style="margin-top: 8px;">That number is not low. That number is disrespectful.</p>
+        <div class="goal">goal: 69</div>
+      </div>
+    </section>
+
+    <!-- OPENING -->
+    <section>
+      <div class="wrap section-card big short-lines">
+        <h2>Let Me Explain Something.</h2>
+
+        <p>I love this man.</p>
+        <p>That's my guy.</p>
+        <p>If he calls me at 3:17 in the morning and says, "I need you," I'm already outside stretching.</p>
+        <p>But this man launched coconut water...</p>
+        <p>...and did not call me.</p>
+
+        <p>Do you understand how crazy that is?</p>
+
+        <p>That's like naming a drink <strong>GOOD NUT</strong> and ignoring the largest professional nut ambassador alive.</p>
+
+        <p>I'm 6'6".</p>
+        <p>I'm lovable.</p>
+        <p>I'm loud.</p>
+        <p>I have commercial teeth.</p>
+
+        <p>You put me on a beach, hand me a coconut, and America buys six cases before I even say words.</p>
+
+        <p>But no.</p>
+        <p>He called a delivery app.</p>
+        <p>A delivery app.</p>
+
+        <p>He looked at the words <strong>GOOD NUT</strong> and said, "You know what this needs? Logistics."</p>
+
+        <p class="callout">Bro, I AM THE LOGISTICS.</p>
+
+        <p>I deliver touchdowns.</p>
+        <p>I deliver chaos.</p>
+        <p>I deliver coconuts into the upper deck.</p>
+
+        <p>I'm not mad.</p>
+        <p>I'm not hurt.</p>
+        <p>I'm not currently refreshing my phone waiting for a sponsorship email.</p>
+
+        <p>I'm just saying this website exists for a reason.</p>
+      </div>
+    </section>
+
+    <!-- TEXT EXCHANGE -->
+    <section style="padding: 40px 0;">
+      <div class="wrap section-card center">
+        <h2>A Totally Real Text Exchange</h2>
+        <p class="muted">Actual text exchange. Not even kidding. Emotionally devastating.</p>
+        <img class="text-exchange" src="assets/text-exchange.png" alt="Parody iMessage screenshot with contact My QB1 Goat." />
+      </div>
+    </section>
+
+    <!-- REVIEW CARDS -->
+    <section>
+      <div class="wrap section-card">
+        <div class="center" style="margin-bottom: 28px;">
+          <h2>The Review</h2>
+          <p class="muted">
+            Honest. Unbiased. Completely objective. From a man who bought a domain instead of processing his feelings privately.
+          </p>
+        </div>
+
+        <div class="grid review-grid">
+
+          <article class="flavor" style="text-align: left;">
+            <h3>🥥 Original</h3>
+            <div class="score">6.9 / 10</div>
+            <p>I hate this.</p>
+            <p>Not because it's bad.</p>
+            <p>Because it's good.</p>
+            <p>That's worse.</p>
+            <p>It's clean. It's refreshing. It tastes like a coconut went to Harvard and started saying "hydration strategy."</p>
+            <p>I took one sip and immediately understood the business plan.</p>
+            <p>That made me furious.</p>
+          </article>
+
+          <article class="flavor" style="text-align: left;">
+            <h3>🍫 Chocolate</h3>
+            <div class="score">9.69 / 10</div>
+            <p>This one is a problem.</p>
+            <p>This is the flavor where I had to sit down.</p>
+            <p>Chocolate coconut water?</p>
+            <p>Who approved this without me?</p>
+            <p>This is the commercial.</p>
+            <p>This is me in slow motion running down a beach, drinking it, yelling "I'M BACK, BABY," and spiking a coconut so hard it becomes real estate.</p>
+          </article>
+
+          <article class="flavor" style="text-align: left;">
+            <h3>✨ Sparkling</h3>
+            <div class="score">6.9 / 10</div>
+            <p>This coconut has a LinkedIn.</p>
+            <p>That's the best way I can explain it.</p>
+            <p>It's bubbly. It's confident. It probably owns linen pants.</p>
+            <p>Do I understand it?</p>
+            <p>No.</p>
+            <p>Would I drink it again?</p>
+            <p>Unfortunately, yes.</p>
+          </article>
+
+          <article class="flavor" style="text-align: left;">
+            <h3>🍺 Beer <span class="muted" style="font-size: 0.7em;">(control group)</span></h3>
+            <div class="score">69 / 10</div>
+            <p>Beer.</p>
+            <p>Because science.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COCONUT INTERVIEW (Kevin equivalent) -->
+    <section style="padding: 40px 0;">
+      <div class="wrap section-card big short-lines center">
+        <p class="muted" style="margin-bottom: 4px;">Here's what makes me sick:</p>
+        <p>This is exactly the kind of thing he would make.</p>
+        <p>Of course his coconut water is probably optimized.</p>
+        <p>Of course he probably interviewed the coconut.</p>
+        <p>He didn't just pick a coconut.</p>
+        <p>He looked it in the eye and said:</p>
+
+        <p class="callout" style="text-align: left;">
+          "Are you committed to greatness?"
+        </p>
+
+        <p>And the coconut said yes.</p>
+        <p>That's the problem.</p>
+        <p>Even his coconuts have discipline.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <div class="wrap section-card">
+        <h2 class="center">Frequently Asked Questions</h2>
+
+        <div class="grid faq-grid">
+
+          <article class="faq">
+            <h3>Q: Are you mad?</h3>
+            <p>No.</p>
+            <p>I simply bought a domain, wrote a full review, built an FAQ, and created a public emotional processing center.</p>
+          </article>
+
+          <article class="faq">
+            <h3>Q: Did he ask you to do this?</h3>
+            <p>No.</p>
+            <p>Which is becoming a pattern.</p>
+          </article>
+
+          <article class="faq">
+            <h3>Q: What's your biggest criticism?</h3>
+            <p>Lack of me.</p>
+          </article>
+
+          <article class="faq">
+            <h3>Q: What would you change?</h3>
+            <p>The mascot.</p>
+            <p>The marketing.</p>
+            <p>The cap table.</p>
+          </article>
+
+          <article class="faq">
+            <h3>Q: Is this a cry for help?</h3>
+            <p>It started as a review.</p>
+            <p>Things evolved.</p>
+          </article>
+
+          <article class="faq">
+            <h3>Q: Would you do the commercial?</h3>
+            <p>I have already packed.</p>
+          </article>
+
+          <article class="faq">
+            <h3>Q: Why did you buy this domain?</h3>
+            <p>Closure.</p>
+          </article>
+
+          <article class="faq">
+            <h3>Q: What happens if they call?</h3>
+            <p>I answer before the first ring finishes.</p>
+            <p>Professionals stay ready.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SPOKESMAN POSTER -->
+    <section style="padding: 30px 0;">
+      <div class="wrap">
+        <figure class="feature-img">
+          <img src="assets/spokesman-left-behind.png" alt="The Spokesman They Left Behind - parody movie poster." />
+        </figure>
+      </div>
+    </section>
+
+    <!-- CLOSING TRIBUTE -->
+    <section class="closing">
+      <div class="wrap section-card big center short-lines" style="padding-bottom: 20px;">
+        <p>All jokes aside:</p>
+        <p>This man is my guy.</p>
+        <p style="font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px;">Teammate.</p>
+        <p style="font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px;">Champion.</p>
+        <p style="font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 20px;">Friend.</p>
+        <p style="opacity: 0.9;">And now, somehow, coconut businessman.</p>
+        <p style="font-weight: 600; margin-top: 16px;">I'm proud of him.</p>
+        <p>I just want one chance.</p>
+        <p>One beach.</p>
+        <p>One camera.</p>
+        <p>One coconut.</p>
+        <p class="callout" style="text-align: left;">Let me spike it.</p>
+        <p>🤙</p>
+      </div>
+    </section>
+
+    <!-- IF YOU'RE READING THIS -->
+    <section style="padding: 30px 0 0;">
+      <div class="wrap section-card big center short-lines">
+        <h2>If You're Reading This</h2>
+        <p>Call me.</p>
+        <p>You know the number.</p>
+        <p>I will fly anywhere.</p>
+        <p>I will wear number 69.</p>
+        <p>I will hold the coconut.</p>
+        <p>I will drink the coconut.</p>
+        <p>I will spike the coconut.</p>
+        <p>I will apologize to the coconut's family afterward.</p>
+        <p style="font-weight: 700;">That is called professionalism.</p>
+
+        <figure class="feature-img" style="margin-top: 24px;">
+          <img src="assets/offer-still-stands.png" alt="The Offer Still Stands - sunset beach with football and coconut." />
+        </figure>
+
+        <p style="margin-top: 28px; font-size: 1.1rem; font-weight: 600;">
+          Built with love, loyalty, mild jealousy, and one very obvious casting mistake.
+        </p>
+        <p style="margin-top: 8px;">🥥🏈❤️</p>
+      </div>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section style="padding: 40px 0 0;">
+      <div class="wrap">
+        <div class="disclaimer">
+          <strong>LEGAL DISCLAIMER</strong><br><br>
+          All characters appearing on this website -- even those suspiciously resembling real people -- are entirely fictional.<br><br>
+          All conversations, reviews, statistics, grievances, coconut trauma, and mascot-related emotional damages have been dramatized for comedic purposes.<br><br>
+          Any celebrity voices heard while reading this website exist entirely in your imagination.<br><br>
+          No affiliation with any athlete, beverage company, delivery service, or coconut should be inferred.<br><br>
+          Viewer discretion is advised.<br><br>
+          Especially if you are a coconut.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    &copy; 2026 DrinkGoodNut.com &nbsp;|&nbsp; A labor of love and mild jealousy
+    <p style="margin-top: 8px; font-size: 0.85rem;">Fan mail, sponsorship offers, and coconut-related apologies: <a href="mailto:contact@good-nut.com" target="_blank" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); cursor: pointer;">contact@good-nut.com</a></p>
+  </footer>
+
+</body>
+</html>
